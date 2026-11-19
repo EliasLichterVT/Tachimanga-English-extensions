@@ -1,0 +1,28 @@
+{
+  "catalog": "manti",
+  "upstream": "manti-X/extensions",
+  "selected_count": 4,
+  "missing": [],
+  "extensions": [
+    {
+      "name": "Manga Plus (App)",
+      "packageName": "com.github.manti.extension.all.mangaplus",
+      "apkUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/apk/tachiyomi-all.mangaplus-v1.6.5.apk"
+    },
+    {
+      "name": "Alpha Manga (App)",
+      "packageName": "com.github.manti.extension.en.alphamanga",
+      "apkUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/apk/tachiyomi-en.alphamanga-v1.6.3.apk"
+    },
+    {
+      "name": "Shonen Jump (App)",
+      "packageName": "com.github.manti.extension.en.shonenjump",
+      "apkUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/apk/tachiyomi-en.shonenjump-v1.6.7.apk"
+    },
+    {
+      "name": "Viz (App)",
+      "packageName": "com.github.manti.extension.en.viz",
+      "apkUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/apk/tachiyomi-en.viz-v1.6.7.apk"
+    }
+  ]
+}

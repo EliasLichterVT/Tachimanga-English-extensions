@@ -1,0 +1,28 @@
+{
+  "catalog": "keiyoushi",
+  "upstream": "keiyoushi/extensions",
+  "selected_count": 4,
+  "missing": [],
+  "extensions": [
+    {
+      "name": "AsmHentai",
+      "packageName": "eu.kanade.tachiyomi.extension.all.asmhentai",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-0/tachiyomi-all.asmhentai-v1.6.15.apk"
+    },
+    {
+      "name": "MangaDex",
+      "packageName": "eu.kanade.tachiyomi.extension.all.mangadex",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d9420cd/tachiyomi-all.mangadex-v1.6.4.apk"
+    },
+    {
+      "name": "Asura Scans",
+      "packageName": "eu.kanade.tachiyomi.extension.en.asurascans",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0478bb/tachiyomi-en.asurascans-v1.6.72.apk"
+    },
+    {
+      "name": "Toonily",
+      "packageName": "eu.kanade.tachiyomi.extension.en.toonily",
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/f1bd88d/tachiyomi-en.toonily-v1.6.78.apk"
+    }
+  ]
+}

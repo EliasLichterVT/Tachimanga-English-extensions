@@ -1,0 +1,38 @@
+{
+  "catalog": "cursed",
+  "upstream": "mojuru/cursed-manga-repo",
+  "selected_count": 6,
+  "missing": [],
+  "extensions": [
+    {
+      "name": "E-Hentai",
+      "packageName": "eu.kanade.tachiyomi.extension.all.ehentai",
+      "apkUrl": "https://github.com/yuzono/cursed-manga-repo/releases/download/6a6e620/tachiyomi-all.ehentai-v1.6.1.apk"
+    },
+    {
+      "name": "Hitomi",
+      "packageName": "eu.kanade.tachiyomi.extension.all.hitomi",
+      "apkUrl": "https://github.com/yuzono/cursed-manga-repo/releases/download/6a6e620/tachiyomi-all.hitomi-v1.6.43.apk"
+    },
+    {
+      "name": "NHentai",
+      "packageName": "eu.kanade.tachiyomi.extension.all.nhentai",
+      "apkUrl": "https://github.com/yuzono/cursed-manga-repo/releases/download/6a6e620/tachiyomi-all.nhentai-v1.6.1.apk"
+    },
+    {
+      "name": "Pururin",
+      "packageName": "eu.kanade.tachiyomi.extension.all.pururin",
+      "apkUrl": "https://github.com/yuzono/cursed-manga-repo/releases/download/a394278/tachiyomi-all.pururin-v1.6.2.apk"
+    },
+    {
+      "name": "Hentai20",
+      "packageName": "eu.kanade.tachiyomi.extension.en.hentai20",
+      "apkUrl": "https://github.com/yuzono/cursed-manga-repo/releases/download/6a6e620/tachiyomi-en.hentai20-v1.6.11.apk"
+    },
+    {
+      "name": "Hentai2Read",
+      "packageName": "eu.kanade.tachiyomi.extension.en.hentai2read",
+      "apkUrl": "https://github.com/yuzono/cursed-manga-repo/releases/download/728635a/tachiyomi-en.hentai2read-v1.6.22.apk"
+    }
+  ]
+}

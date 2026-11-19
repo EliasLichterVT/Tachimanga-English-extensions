@@ -1,0 +1,145 @@
+{
+  "name": "Manti-X - Mainstream",
+  "badgeLabel": "M",
+  "signingKey": "ae85534898149ef7ee10cf060aa0b2b37b72f4c1ea7e06762a2fcf466b02d745",
+  "contact": {
+    "website": "https://github.com/manti-X/extensions",
+    "discord": "https://ko-fi.com/bakaloli"
+  },
+  "extensionList": {
+    "extensions": [
+      {
+        "name": "Manga Plus (App)",
+        "packageName": "com.github.manti.extension.all.mangaplus",
+        "resources": {
+          "apkUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/apk/tachiyomi-all.mangaplus-v1.6.5.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/icon/com.github.manti.extension.all.mangaplus.png",
+          "jarUrl": "https://raw.githubusercontent.com/manti-X/extensions/repo/jar/tachiyomi-all.mangaplus-v1.6.5.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106005",
+        "versionName": "1.6.5",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "4271942238130494798",
+            "name": "Manga Plus (App)",
+            "language": "en",
+            "homeUrl": "https://mangaplus.shueisha.co.jp"
+          },
+          {
+            "id": "5748536721944188349",
+            "name": "Manga Plus (App)",
+            "language": "es",
+            "homeUrl": "https://mangaplus.shueisha.co.jp"
+          },
+          {
+            "id": "4521200606602809231",
+            "name": "Manga Plus (App)",
+            "language": "fr",
+            "homeUrl": "https://mangaplus.shueisha.co.jp"
+          },
+          {
+            "id": "7293725775162349421",
+            "name": "Manga Plus (App)",
+            "language": "id",
+            "homeUrl": "https://mangaplus.shueisha.co.jp"
+          },
+          {
+            "id": "1145724579562736840",
+            "name": "Manga Plus (App)",
+            "language": "pt-BR",
+            "homeUrl": "https://mangaplus.shueisha.co.jp"
+          },
+          {
+            "id": "5914483221621994055",
+            "name": "Manga Plus (App)",
+            "language": "ru",
+            "homeUrl": "https://mangaplus.shueisha.co.jp"
+          },
+          {
+            "id": "4473593935282656010",
+            "name": "Manga Plus (App)",
+            "language": "th",
+            "homeUrl": "https://mangaplus.shueisha.co.jp"
+          },
+          {
+            "id": "165001383509847122",
+            "name": "Manga Plus (App)",
+            "language": "vi",
+            "homeUrl": "https://mangaplus.shueisha.co.jp"
+          },
+          {
+            "id": "3791765612702539030",
+            "name": "Manga Plus (App)",
+            "language": "de",
+            "homeUrl": "https://mangaplus.shueisha.co.jp"
+          }
+        ]
+      },
+      {
+        "name": "Alpha Manga (App)",
+        "packageName": "com.github.manti.extension.en.alphamanga",
+        "resources": {
+          "apkUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/apk/tachiyomi-en.alphamanga-v1.6.3.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/icon/com.github.manti.extension.en.alphamanga.png",
+          "jarUrl": "https://raw.githubusercontent.com/manti-X/extensions/repo/jar/tachiyomi-en.alphamanga-v1.6.3.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106003",
+        "versionName": "1.6.3",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "622874214439467587",
+            "name": "Alpha Manga (App)",
+            "language": "en",
+            "homeUrl": "https://www.alpha-manga.com"
+          }
+        ]
+      },
+      {
+        "name": "Shonen Jump (App)",
+        "packageName": "com.github.manti.extension.en.shonenjump",
+        "resources": {
+          "apkUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/apk/tachiyomi-en.shonenjump-v1.6.7.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/icon/com.github.manti.extension.en.shonenjump.png",
+          "jarUrl": "https://raw.githubusercontent.com/manti-X/extensions/repo/jar/tachiyomi-en.shonenjump-v1.6.7.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106007",
+        "versionName": "1.6.7",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "505403453408081509",
+            "name": "Shonen Jump (App)",
+            "language": "en",
+            "homeUrl": "https://www.viz.com"
+          }
+        ]
+      },
+      {
+        "name": "Viz (App)",
+        "packageName": "com.github.manti.extension.en.viz",
+        "resources": {
+          "apkUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/apk/tachiyomi-en.viz-v1.6.7.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/manti-X/extensions@repo/icon/com.github.manti.extension.en.viz.png",
+          "jarUrl": "https://raw.githubusercontent.com/manti-X/extensions/repo/jar/tachiyomi-en.viz-v1.6.7.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106007",
+        "versionName": "1.6.7",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "5948220632474500512",
+            "name": "Viz (App)",
+            "language": "en",
+            "homeUrl": "https://www.viz.com"
+          }
+        ]
+      }
+    ]
+  }
+}
