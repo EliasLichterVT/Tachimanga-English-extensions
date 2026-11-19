@@ -17,7 +17,7 @@ jobs:
   sync:
     name: Update Tachimanga extensions
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repository
@@ -25,11 +25,11 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Download extension repository
+      - name: Download upstream repository
         run: |
           set -euo pipefail
 
-          echo "Cloning upstream extension repository..."
+          echo "Downloading Keiyoushi extension metadata..."
 
           git clone \
             --depth 1 \
@@ -38,61 +38,63 @@ jobs:
             https://github.com/keiyoushi/extensions.git \
             /tmp/upstream
 
-          echo "Upstream repository cloned."
-          echo "Files found:"
-
+          echo "Upstream repository downloaded."
           ls -lah /tmp/upstream
 
-          echo "Checking required files..."
+      - name: Verify upstream files
+        run: |
+          set -euo pipefail
 
-          for path in index.pb repo.json apk; do
-            if [ ! -e "/tmp/upstream/$path" ]; then
-              echo "::error::Missing upstream path: $path"
+          for file in index.pb repo.json; do
+            if [ ! -s "/tmp/upstream/$file" ]; then
+              echo "::error::Missing required file: $file"
               exit 1
             fi
           done
 
-          echo "Required upstream files verified."
+          echo "Required files verified."
 
-      - name: Synchronize extension files
+      - name: Synchronize repository files
         run: |
           set -euo pipefail
 
-          echo "Synchronizing extension files..."
-
-          mkdir -p apk
+          echo "Synchronizing extension metadata..."
 
           cp /tmp/upstream/index.pb ./index.pb
           cp /tmp/upstream/repo.json ./repo.json
 
-          for file in index.json index.min.json; do
+          for file in \
+            index.json \
+            index.min.json \
+            index.html \
+            release-assets.json; do
+
             if [ -f "/tmp/upstream/$file" ]; then
               cp "/tmp/upstream/$file" "./$file"
+              echo "Updated $file"
             fi
-          done
 
-          rsync -a --delete \
-            /tmp/upstream/apk/ ./apk/
+          done
 
           if [ -d /tmp/upstream/icon ]; then
             mkdir -p icon
+
             rsync -a --delete \
               /tmp/upstream/icon/ ./icon/
+
+            echo "Updated extension icons."
           fi
 
-          echo "Extension synchronization complete."
+          echo "Synchronization completed."
 
-      - name: Verify synchronized files
+      - name: Verify synchronized repository
         run: |
           set -euo pipefail
 
-          echo "Verifying repository contents..."
-
           test -s index.pb
           test -s repo.json
-          test -d apk
 
-          echo "Repository files verified."
+          echo "Repository verification successful."
           ls -lh index.pb repo.json
 
       - name: Commit and publish updates
@@ -103,16 +105,29 @@ jobs:
           git config user.email \
             "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A
+          git add \
+            index.pb \
+            repo.json
+
+          for path in \
+            index.json \
+            index.min.json \
+            index.html \
+            release-assets.json \
+            icon; do
+
+            if [ -e "$path" ]; then
+              git add -A -- "$path"
+            fi
+
+          done
 
           if git diff --cached --quiet; then
-            echo "No extension updates available."
+            echo "Repository already up to date."
             exit 0
           fi
-
-          echo "Publishing extension updates..."
 
           git commit -m "Update Tachimanga extensions"
           git push origin HEAD:main
 
-          echo "Repository updated successfully."
+          echo "Repository published successfully."
