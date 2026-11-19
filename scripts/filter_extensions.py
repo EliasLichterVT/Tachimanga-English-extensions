@@ -1,6 +1,7 @@
 
 #!/usr/bin/env python3
 
+import copy
 import gzip
 import json
 import re
@@ -10,256 +11,395 @@ from pathlib import Path
 UPSTREAM = Path(sys.argv[1])
 OUTPUT = Path(sys.argv[2])
 
-REPO_OWNER = "EliasLichterVT"
-REPO_NAME = "Tachimanga-English-extensions"
-
-INDEX_URL = (
-    f"https://raw.githubusercontent.com/"
-    f"{REPO_OWNER}/{REPO_NAME}/main/index.pb"
-)
-
-# These are source-name aliases, not package IDs.
-# Only extensions actually found upstream are included.
+# Exact source-name aliases, normalized for matching.
 ALLOWLIST = {
     "Asura Scans": [
-        "asura scans",
-        "asurascans",
-        "asuracomic",
-        "asura comic",
+        "Asura Scans",
+        "AsuraComic",
+        "Asura Comic",
     ],
     "Reaper Scans": [
-        "reaper scans",
-        "reaperscans",
-        "reaper comics",
+        "Reaper Scans",
+        "ReaperScans",
+        "Reaper Comics",
     ],
     "MangaDex": [
-        "mangadex",
+        "MangaDex",
     ],
     "nhentai": [
         "nhentai",
     ],
     "E-Hentai / ExHentai": [
-        "e-hentai",
-        "exhentai",
+        "E-Hentai",
+        "ExHentai",
+        "E-Hentai / ExHentai",
     ],
     "Hitomi.la": [
-        "hitomi.la",
-        "hitomi",
+        "Hitomi.la",
+        "Hitomi",
     ],
     "Toonily": [
-        "toonily",
+        "Toonily",
+    ],
+    "AsmHentai": [
+        "AsmHentai",
     ],
 }
 
 def normalize(value):
     return re.sub(
-        r"[^a-z0-9]+", "",
+        r"[^a-z0-9]",
+        "",
         str(value).lower()
     )
 
-def matches(entry):
-    names = [entry.get("name", "")]
+def find_group(entry):
+    names = [
+        entry.get("name", ""),
+        entry.get("packageName", "").split(".")[-1],
+    ]
+
     names.extend(
         source.get("name", "")
         for source in entry.get("sources", [])
     )
 
+    normalized_names = {
+        normalize(name)
+        for name in names
+    }
+
     for group, aliases in ALLOWLIST.items():
-        for name in names:
-            normalized = normalize(name)
-            if any(
-                normalize(alias) == normalized
-                for alias in aliases
-            ):
-                return group
+        if any(
+            normalize(alias) in normalized_names
+            for alias in aliases
+        ):
+            return group
 
     return None
 
-def read_varint(data, pos):
-    result = 0
+def has_english(entry):
+    return any(
+        str(source.get("language", "")).lower()
+        in ("en", "all")
+        for source in entry.get("sources", [])
+    )
+
+def read_varint(data, position):
+    value = 0
     shift = 0
 
     while True:
-        if pos >= len(data):
-            raise ValueError("Truncated protobuf")
+        if position >= len(data):
+            raise ValueError("Truncated protobuf varint")
 
-        byte = data[pos]
-        pos += 1
+        byte = data[position]
+        position += 1
 
-        result |= (byte & 0x7F) << shift
+        value |= (byte & 127) << shift
 
-        if not byte & 0x80:
-            return result, pos
+        if not (byte & 128):
+            return value, position
 
         shift += 7
 
         if shift > 70:
-            raise ValueError("Invalid varint")
+            raise ValueError("Invalid protobuf varint")
 
-def protobuf_fields(data):
-    """Yield complete encoded protobuf fields."""
-    pos = 0
+def fields(data):
+    position = 0
 
-    while pos < len(data):
-        start = pos
-        tag, pos = read_varint(data, pos)
-        field_number = tag >> 3
-        wire_type = tag & 7
+    while position < len(data):
+        start = position
+        tag, position = read_varint(
+            data, position
+        )
+
+        number = tag >> 3
+        wire = tag & 7
         payload = None
 
-        if wire_type == 0:
-            _, pos = read_varint(data, pos)
-        elif wire_type == 1:
-            pos += 8
-        elif wire_type == 2:
-            length, pos = read_varint(data, pos)
-            payload = data[pos:pos + length]
-            pos += length
-        elif wire_type == 5:
-            pos += 4
-        else:
-            raise ValueError(
-                f"Unsupported wire type: {wire_type}"
+        if number == 0:
+            raise ValueError("Invalid protobuf field")
+
+        if wire == 0:
+            _, position = read_varint(
+                data, position
             )
 
-        if pos > len(data):
-            raise ValueError("Truncated protobuf field")
+        elif wire == 1:
+            position += 8
 
-        yield field_number, wire_type, payload, data[start:pos]
+        elif wire == 2:
+            size, position = read_varint(
+                data, position
+            )
+            payload = data[
+                position:position + size
+            ]
+            position += size
+
+        elif wire == 5:
+            position += 4
+
+        else:
+            raise ValueError(
+                f"Unsupported protobuf wire type: {wire}"
+            )
+
+        if position > len(data):
+            raise ValueError(
+                "Truncated protobuf field"
+            )
+
+        yield (
+            number,
+            wire,
+            payload,
+            data[start:position]
+        )
+
+def contains_package(data, packages, depth=0):
+    """Find package strings in nested protobuf messages."""
+    if depth > 8:
+        return set()
+
+    hits = set()
+
+    try:
+        parsed = list(fields(data))
+    except ValueError:
+        return hits
+
+    for _, wire, payload, _ in parsed:
+        if wire != 2 or payload is None:
+            continue
+
+        if payload in packages:
+            hits.add(payload)
+            continue
+
+        # Inspect nested protobuf messages.
+        hits.update(
+            contains_package(
+                payload,
+                packages,
+                depth + 1
+            )
+        )
+
+    return hits
+
+def filter_protobuf(original, packages):
+    top = list(fields(original))
+
+    # Determine which top-level field holds extension
+    # records, using the selected package names.
+    candidates = {}
+
+    for number, wire, payload, _ in top:
+        if wire != 2 or payload is None:
+            continue
+
+        hits = contains_package(
+            payload, packages
+        )
+
+        if hits:
+            candidates.setdefault(
+                number, set()
+            ).update(hits)
+
+    valid = [
+        number
+        for number, hits in candidates.items()
+        if hits == packages
+    ]
+
+    if len(valid) != 1:
+        raise RuntimeError(
+            "Could not safely identify protobuf "
+            "extension records. No index published."
+        )
+
+    record_field = valid[0]
+    kept = []
+    matched = set()
+
+    for number, wire, payload, raw in top:
+        if number != record_field:
+            kept.append(raw)
+            continue
+
+        if wire != 2 or payload is None:
+            raise RuntimeError(
+                "Unexpected extension record format"
+            )
+
+        hits = contains_package(
+            payload, packages
+        )
+
+        if hits:
+            kept.append(raw)
+            matched.update(hits)
+
+    if matched != packages:
+        raise RuntimeError(
+            "Protobuf package verification failed"
+        )
+
+    return b"".join(kept)
 
 def main():
-    OUTPUT.mkdir(parents=True, exist_ok=True)
-
-    entries = json.loads(
-        (UPSTREAM / "index.json").read_text()
+    OUTPUT.mkdir(
+        parents=True,
+        exist_ok=True
     )
 
-    if not isinstance(entries, list):
-        raise ValueError("Unexpected JSON catalog format")
+    catalog = json.loads(
+        (UPSTREAM / "index.json").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    entries = catalog[
+        "extensionList"
+    ]["extensions"]
 
     selected = []
     found_groups = set()
 
     for entry in entries:
-        if entry.get("lang", "").lower() != "en":
+        group = find_group(entry)
+
+        if not group or not has_english(entry):
             continue
 
-        group = matches(entry)
-
-        if group:
-            selected.append(entry)
-            found_groups.add(group)
+        selected.append(entry)
+        found_groups.add(group)
 
     if not selected:
         raise RuntimeError(
-            "No matching English extensions found"
+            "No requested extensions found"
         )
 
     packages = {
-        entry["pkg"].encode("utf-8")
+        entry["packageName"].encode("utf-8")
         for entry in selected
     }
 
-    compressed = (UPSTREAM / "index.pb").read_bytes()
+    compressed = (
+        UPSTREAM / "index.pb"
+    ).read_bytes()
 
     if not compressed.startswith(b"\x1f\x8b"):
         raise RuntimeError(
-            "Expected a gzip-compressed protobuf index"
+            "Unexpected index.pb compression"
         )
 
-    original = gzip.decompress(compressed)
-
-    retained = []
-    matched_packages = set()
-
-    for number, wire_type, payload, raw in protobuf_fields(original):
-        if wire_type != 2 or payload is None:
-            retained.append(raw)
-            continue
-
-        # Match package IDs as complete protobuf string
-        # fields inside each top-level extension record.
-        strings = {
-            value
-            for _, kind, value, _ in protobuf_fields(payload)
-            if kind == 2 and value is not None
-        }
-
-        hits = strings & packages
-
-        if hits:
-            retained.append(raw)
-            matched_packages.update(hits)
-        elif number != 1:
-            # Preserve top-level metadata fields.
-            retained.append(raw)
-
-    if matched_packages != packages:
-        missing = sorted(
-            pkg.decode("utf-8")
-            for pkg in packages - matched_packages
-        )
-        raise RuntimeError(
-            "Protobuf entries did not match JSON catalog. "
-            "No files published. Missing: "
-            + ", ".join(missing)
-        )
-
-    filtered = b"".join(retained)
-
-    (OUTPUT / "index.pb").write_bytes(
-        gzip.compress(filtered, mtime=0)
+    original = gzip.decompress(
+        compressed
     )
 
-    (OUTPUT / "index.json").write_text(
-        json.dumps(
-            selected,
-            indent=2,
-            ensure_ascii=False
-        ) + "\n"
+    filtered = filter_protobuf(
+        original,
+        packages
     )
 
-    upstream_repo = json.loads(
-        (UPSTREAM / "repo.json").read_text()
-    )
+    # Preserve the catalog's original metadata.
+    curated_catalog = copy.deepcopy(catalog)
+    curated_catalog[
+        "extensionList"
+    ]["extensions"] = selected
 
-    upstream_repo["index_v2"] = INDEX_URL
-    upstream_repo.setdefault("meta", {})["name"] = (
+    curated_catalog["name"] = (
         "Tachimanga Curated English"
     )
 
-    (OUTPUT / "repo.json").write_text(
-        json.dumps(upstream_repo, indent=2) + "\n"
+    repo = json.loads(
+        (UPSTREAM / "repo.json").read_text(
+            encoding="utf-8"
+        )
     )
 
+    # Retain upstream repository metadata.
+    # APK URLs remain pointed at upstream releases.
     report = {
-        "selected_extensions": len(selected),
+        "selected_count": len(selected),
         "found_groups": sorted(found_groups),
         "missing_groups": sorted(
             set(ALLOWLIST) - found_groups
         ),
         "extensions": [
             {
-                "name": entry["name"],
-                "pkg": entry["pkg"],
-                "nsfw": entry.get("nsfw"),
+                "name": entry.get("name"),
+                "packageName": entry.get(
+                    "packageName"
+                ),
+                "contentWarning": entry.get(
+                    "contentWarning"
+                ),
+                "apkUrl": entry.get(
+                    "resources", {}
+                ).get("apkUrl"),
             }
             for entry in selected
         ],
     }
 
+    # Write only after validation succeeds.
+    (OUTPUT / "index.pb").write_bytes(
+        gzip.compress(
+            filtered,
+            mtime=0
+        )
+    )
+
+    (OUTPUT / "index.json").write_text(
+        json.dumps(
+            curated_catalog,
+            indent=2,
+            ensure_ascii=False
+        ) + "\n",
+        encoding="utf-8"
+    )
+
+    (OUTPUT / "repo.json").write_text(
+        json.dumps(
+            repo,
+            indent=2,
+            ensure_ascii=False
+        ) + "\n",
+        encoding="utf-8"
+    )
+
     (OUTPUT / "curated-report.json").write_text(
-        json.dumps(report, indent=2) + "\n"
+        json.dumps(
+            report,
+            indent=2,
+            ensure_ascii=False
+        ) + "\n",
+        encoding="utf-8"
     )
 
     print(
-        f"Selected {len(selected)} English extensions"
+        f"Selected {len(selected)} extensions"
     )
-    print("Found:", ", ".join(sorted(found_groups)))
+
     print(
-        "Missing:",
-        ", ".join(report["missing_groups"]) or "None"
+        "Included:",
+        ", ".join(sorted(found_groups))
     )
+
+    missing = report["missing_groups"]
+
+    print(
+        "Unavailable:",
+        ", ".join(missing) if missing else "None"
+    )
+
+    print("Catalog generation complete.")
 
 if __name__ == "__main__":
     main()
