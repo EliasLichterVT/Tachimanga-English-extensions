@@ -29,6 +29,8 @@ jobs:
         run: |
           set -euo pipefail
 
+          echo "Cloning upstream extension repository..."
+
           git clone \
             --depth 1 \
             --single-branch \
@@ -36,13 +38,27 @@ jobs:
             https://github.com/keiyoushi/extensions.git \
             /tmp/upstream
 
-          test -s /tmp/upstream/index.pb
-          test -s /tmp/upstream/repo.json
-          test -d /tmp/upstream/apk
+          echo "Upstream repository cloned."
+          echo "Files found:"
+
+          ls -lah /tmp/upstream
+
+          echo "Checking required files..."
+
+          for path in index.pb repo.json apk; do
+            if [ ! -e "/tmp/upstream/$path" ]; then
+              echo "::error::Missing upstream path: $path"
+              exit 1
+            fi
+          done
+
+          echo "Required upstream files verified."
 
       - name: Synchronize extension files
         run: |
           set -euo pipefail
+
+          echo "Synchronizing extension files..."
 
           mkdir -p apk
 
@@ -64,6 +80,21 @@ jobs:
               /tmp/upstream/icon/ ./icon/
           fi
 
+          echo "Extension synchronization complete."
+
+      - name: Verify synchronized files
+        run: |
+          set -euo pipefail
+
+          echo "Verifying repository contents..."
+
+          test -s index.pb
+          test -s repo.json
+          test -d apk
+
+          echo "Repository files verified."
+          ls -lh index.pb repo.json
+
       - name: Commit and publish updates
         run: |
           set -euo pipefail
@@ -79,5 +110,9 @@ jobs:
             exit 0
           fi
 
+          echo "Publishing extension updates..."
+
           git commit -m "Update Tachimanga extensions"
           git push origin HEAD:main
+
+          echo "Repository updated successfully."
