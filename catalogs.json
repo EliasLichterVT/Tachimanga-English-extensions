@@ -1,0 +1,43 @@
+
+{
+  "catalogs": [
+    {
+      "id": "keiyoushi",
+      "name": "Keiyoushi - Curated",
+      "repository": "keiyoushi/extensions",
+      "branch": "repo",
+      "extensions": [
+        "Asura Scans",
+        "MangaDex",
+        "Toonily",
+        "AsmHentai"
+      ]
+    },
+    {
+      "id": "cursed",
+      "name": "Cursed - Adult",
+      "repository": "mojuru/cursed-manga-repo",
+      "branch": "repo",
+      "extensions": [
+        "E-Hentai",
+        "Hitomi",
+        "NHentai",
+        "Pururin",
+        "Hentai20",
+        "Hentai2Read"
+      ]
+    },
+    {
+      "id": "manti",
+      "name": "Manti-X - Mainstream",
+      "repository": "manti-X/extensions",
+      "branch": "repo",
+      "extensions": [
+        "Manga Plus (App)",
+        "Shonen Jump (App)",
+        "Viz (App)",
+        "Alpha Manga (App)"
+      ]
+    }
+  ]
+}
