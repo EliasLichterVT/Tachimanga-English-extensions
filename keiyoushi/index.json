@@ -48,6 +48,51 @@
         ]
       },
       {
+        "name": "Comikey",
+        "packageName": "eu.kanade.tachiyomi.extension.all.comikey",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/02402ef/tachiyomi-all.comikey-v1.6.15.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/all/comikey/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/02402ef/tachiyomi-all.comikey-v1.6.15.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106015",
+        "versionName": "1.6.15",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "2769857481066602061",
+            "name": "Comikey",
+            "language": "en",
+            "homeUrl": "https://comikey.com"
+          },
+          {
+            "id": "374080003312345029",
+            "name": "Comikey",
+            "language": "es",
+            "homeUrl": "https://comikey.com"
+          },
+          {
+            "id": "1684620622390751911",
+            "name": "Comikey",
+            "language": "id",
+            "homeUrl": "https://comikey.com"
+          },
+          {
+            "id": "4174862482785095737",
+            "name": "Comikey",
+            "language": "pt-BR",
+            "homeUrl": "https://comikey.com"
+          },
+          {
+            "id": "4923846262931005728",
+            "name": "Comikey Brasil",
+            "language": "pt-BR",
+            "homeUrl": "https://br.comikey.com"
+          }
+        ]
+      },
+      {
         "name": "MangaDex",
         "packageName": "eu.kanade.tachiyomi.extension.all.mangadex",
         "resources": {
@@ -435,6 +480,153 @@
         ]
       },
       {
+        "name": "MangaFire",
+        "packageName": "eu.kanade.tachiyomi.extension.all.mangafire",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/02402ef/tachiyomi-all.mangafire-v1.6.38.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/all/mangafire/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/02402ef/tachiyomi-all.mangafire-v1.6.38.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106038",
+        "versionName": "1.6.38",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "6084907896154116083",
+            "name": "MangaFire",
+            "language": "en",
+            "homeUrl": "https://mangafire.to"
+          },
+          {
+            "id": "8098539940032331958",
+            "name": "MangaFire",
+            "language": "es",
+            "homeUrl": "https://mangafire.to"
+          },
+          {
+            "id": "3849324770075062403",
+            "name": "MangaFire",
+            "language": "es-419",
+            "homeUrl": "https://mangafire.to"
+          },
+          {
+            "id": "6228021941803932286",
+            "name": "MangaFire",
+            "language": "fr",
+            "homeUrl": "https://mangafire.to"
+          },
+          {
+            "id": "524110931382140732",
+            "name": "MangaFire",
+            "language": "ja",
+            "homeUrl": "https://mangafire.to"
+          },
+          {
+            "id": "758400875161895515",
+            "name": "MangaFire",
+            "language": "pt",
+            "homeUrl": "https://mangafire.to"
+          },
+          {
+            "id": "7842137233968841729",
+            "name": "MangaFire",
+            "language": "pt-BR",
+            "homeUrl": "https://mangafire.to"
+          }
+        ]
+      },
+      {
+        "name": "Tappytoon",
+        "packageName": "eu.kanade.tachiyomi.extension.all.tappytoon",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4dd3c34/tachiyomi-all.tappytoon-v1.6.3.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/all/tappytoon/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/4dd3c34/tachiyomi-all.tappytoon-v1.6.3.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106003",
+        "versionName": "1.6.3",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "7049142072741547166",
+            "name": "Tappytoon",
+            "language": "en",
+            "homeUrl": "https://www.tappytoon.com/en"
+          },
+          {
+            "id": "8311223969496865438",
+            "name": "Tappytoon",
+            "language": "fr",
+            "homeUrl": "https://www.tappytoon.com/fr"
+          },
+          {
+            "id": "8708489334089410870",
+            "name": "Tappytoon",
+            "language": "de",
+            "homeUrl": "https://www.tappytoon.com/de"
+          }
+        ]
+      },
+      {
+        "name": "Webtoons.com",
+        "packageName": "eu.kanade.tachiyomi.extension.all.webtoons",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/8947c37/tachiyomi-all.webtoons-v1.6.4.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/all/webtoons/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/8947c37/tachiyomi-all.webtoons-v1.6.4.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106004",
+        "versionName": "1.6.4",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "2522335540328470744",
+            "name": "Webtoons.com",
+            "language": "en",
+            "homeUrl": "https://www.webtoons.com"
+          },
+          {
+            "id": "8749627068478740298",
+            "name": "Webtoons.com",
+            "language": "id",
+            "homeUrl": "https://www.webtoons.com"
+          },
+          {
+            "id": "3330861233813615504",
+            "name": "Webtoons.com",
+            "language": "th",
+            "homeUrl": "https://www.webtoons.com"
+          },
+          {
+            "id": "8664735734660636295",
+            "name": "Webtoons.com",
+            "language": "es",
+            "homeUrl": "https://www.webtoons.com"
+          },
+          {
+            "id": "8251758253314457060",
+            "name": "Webtoons.com",
+            "language": "fr",
+            "homeUrl": "https://www.webtoons.com"
+          },
+          {
+            "id": "2959982438613576472",
+            "name": "Webtoons.com",
+            "language": "zh-Hant",
+            "homeUrl": "https://www.webtoons.com"
+          },
+          {
+            "id": "1486822823904297379",
+            "name": "Webtoons.com",
+            "language": "de",
+            "homeUrl": "https://www.webtoons.com"
+          }
+        ]
+      },
+      {
         "name": "Asura Scans",
         "packageName": "eu.kanade.tachiyomi.extension.en.asurascans",
         "resources": {
@@ -456,6 +648,141 @@
         ]
       },
       {
+        "name": "Flame Comics",
+        "packageName": "eu.kanade.tachiyomi.extension.en.flamecomics",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-0/tachiyomi-en.flamecomics-v1.6.3.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/flamecomics/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-0/tachiyomi-en.flamecomics-v1.6.3.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106003",
+        "versionName": "1.6.3",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "8531542650987673943",
+            "name": "Flame Comics",
+            "language": "en",
+            "homeUrl": "https://flamecomics.xyz"
+          }
+        ]
+      },
+      {
+        "name": "Mangakakalot",
+        "packageName": "eu.kanade.tachiyomi.extension.en.mangakakalot",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.mangakakalot-v1.6.28.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/mangakakalot/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.mangakakalot-v1.6.28.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106028",
+        "versionName": "1.6.28",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "2528986671771677900",
+            "name": "Mangakakalot",
+            "language": "en",
+            "homeUrl": "https://www.kakamanga.com",
+            "mirrorUrls": [
+              "https://www.kakamanga.com",
+              "https://www.mangakakalove.com"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Manganato",
+        "packageName": "eu.kanade.tachiyomi.extension.en.manganelo",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.manganelo-v1.6.25.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/manganelo/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.manganelo-v1.6.25.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106025",
+        "versionName": "1.6.25",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "1024627298672457456",
+            "name": "Manganato",
+            "language": "en",
+            "homeUrl": "https://www.natomanga.com",
+            "mirrorUrls": [
+              "https://www.natomanga.com",
+              "https://www.nelomanga.net",
+              "https://www.manganato.gg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "MangaPill",
+        "packageName": "eu.kanade.tachiyomi.extension.en.mangapill",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.mangapill-v1.6.1.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/mangapill/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.mangapill-v1.6.1.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106001",
+        "versionName": "1.6.1",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "8448310129093543312",
+            "name": "MangaPill",
+            "language": "en",
+            "homeUrl": "https://mangapill.com"
+          }
+        ]
+      },
+      {
+        "name": "Manhua Plus",
+        "packageName": "eu.kanade.tachiyomi.extension.en.manhuaplus",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/f1bd88d/tachiyomi-en.manhuaplus-v1.6.67.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/manhuaplus/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/f1bd88d/tachiyomi-en.manhuaplus-v1.6.67.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106067",
+        "versionName": "1.6.67",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "9030178752551947945",
+            "name": "Manhua Plus",
+            "language": "en",
+            "homeUrl": "https://manhuaplus.com"
+          }
+        ]
+      },
+      {
+        "name": "Tapas",
+        "packageName": "eu.kanade.tachiyomi.extension.en.tapastic",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/3cf15bc/tachiyomi-en.tapastic-v1.6.6.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/tapastic/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/3cf15bc/tachiyomi-en.tapastic-v1.6.6.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106006",
+        "versionName": "1.6.6",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "5554748812413853237",
+            "name": "Tapas",
+            "language": "en",
+            "homeUrl": "https://tapas.io"
+          }
+        ]
+      },
+      {
         "name": "Toonily",
         "packageName": "eu.kanade.tachiyomi.extension.en.toonily",
         "resources": {
@@ -473,6 +800,27 @@
             "name": "Toonily",
             "language": "en",
             "homeUrl": "https://toonily.com"
+          }
+        ]
+      },
+      {
+        "name": "Weeb Central",
+        "packageName": "eu.kanade.tachiyomi.extension.en.weebcentral",
+        "resources": {
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/3cf15bc/tachiyomi-en.weebcentral-v1.6.27.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/weebcentral/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/3cf15bc/tachiyomi-en.weebcentral-v1.6.27.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106027",
+        "versionName": "1.6.27",
+        "contentWarning": "CONTENT_WARNING_MIXED",
+        "sources": [
+          {
+            "id": "2131019126180322627",
+            "name": "Weeb Central",
+            "language": "en",
+            "homeUrl": "https://weebcentral.com"
           }
         ]
       }
