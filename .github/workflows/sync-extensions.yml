@@ -1,0 +1,83 @@
+
+name: Sync extension repository
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: extension-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Update Tachimanga extensions
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Download extension repository
+        run: |
+          set -euo pipefail
+
+          git clone \
+            --depth 1 \
+            --single-branch \
+            --branch repo \
+            https://github.com/keiyoushi/extensions.git \
+            /tmp/upstream
+
+          test -s /tmp/upstream/index.pb
+          test -s /tmp/upstream/repo.json
+          test -d /tmp/upstream/apk
+
+      - name: Synchronize extension files
+        run: |
+          set -euo pipefail
+
+          mkdir -p apk
+
+          cp /tmp/upstream/index.pb ./index.pb
+          cp /tmp/upstream/repo.json ./repo.json
+
+          for file in index.json index.min.json; do
+            if [ -f "/tmp/upstream/$file" ]; then
+              cp "/tmp/upstream/$file" "./$file"
+            fi
+          done
+
+          rsync -a --delete \
+            /tmp/upstream/apk/ ./apk/
+
+          if [ -d /tmp/upstream/icon ]; then
+            mkdir -p icon
+            rsync -a --delete \
+              /tmp/upstream/icon/ ./icon/
+          fi
+
+      - name: Commit and publish updates
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No extension updates available."
+            exit 0
+          fi
+
+          git commit -m "Update Tachimanga extensions"
+          git push origin HEAD:main
