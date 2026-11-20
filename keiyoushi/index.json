@@ -573,13 +573,13 @@
         "name": "Webtoons.com",
         "packageName": "eu.kanade.tachiyomi.extension.all.webtoons",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/8947c37/tachiyomi-all.webtoons-v1.6.4.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-all.webtoons-v1.6.5.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/all/webtoons/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/8947c37/tachiyomi-all.webtoons-v1.6.4.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-all.webtoons-v1.6.5.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106004",
-        "versionName": "1.6.4",
+        "versionCode": "106005",
+        "versionName": "1.6.5",
         "contentWarning": "CONTENT_WARNING_SAFE",
         "sources": [
           {
@@ -672,9 +672,9 @@
         "name": "Mangakakalot",
         "packageName": "eu.kanade.tachiyomi.extension.en.mangakakalot",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.mangakakalot-v1.6.28.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.mangakakalot-v1.6.28.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/mangakakalot/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.mangakakalot-v1.6.28.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.mangakakalot-v1.6.28.jar"
         },
         "extensionLib": "1.6",
         "versionCode": "106028",
@@ -697,9 +697,9 @@
         "name": "Manganato",
         "packageName": "eu.kanade.tachiyomi.extension.en.manganelo",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.manganelo-v1.6.25.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.manganelo-v1.6.25.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/manganelo/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.manganelo-v1.6.25.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.manganelo-v1.6.25.jar"
         },
         "extensionLib": "1.6",
         "versionCode": "106025",
@@ -744,13 +744,13 @@
         "name": "Manhua Plus",
         "packageName": "eu.kanade.tachiyomi.extension.en.manhuaplus",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/f1bd88d/tachiyomi-en.manhuaplus-v1.6.67.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/ef952a6/tachiyomi-en.manhuaplus-v1.6.68.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/manhuaplus/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/f1bd88d/tachiyomi-en.manhuaplus-v1.6.67.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/ef952a6/tachiyomi-en.manhuaplus-v1.6.68.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106067",
-        "versionName": "1.6.67",
+        "versionCode": "106068",
+        "versionName": "1.6.68",
         "contentWarning": "CONTENT_WARNING_SAFE",
         "sources": [
           {
@@ -786,13 +786,13 @@
         "name": "Toonily",
         "packageName": "eu.kanade.tachiyomi.extension.en.toonily",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/f1bd88d/tachiyomi-en.toonily-v1.6.78.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/ef952a6/tachiyomi-en.toonily-v1.6.79.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/toonily/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/f1bd88d/tachiyomi-en.toonily-v1.6.78.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/ef952a6/tachiyomi-en.toonily-v1.6.79.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106078",
-        "versionName": "1.6.78",
+        "versionCode": "106079",
+        "versionName": "1.6.79",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
