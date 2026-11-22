@@ -672,22 +672,22 @@
         "name": "Mangakakalot",
         "packageName": "eu.kanade.tachiyomi.extension.en.mangakakalot",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.mangakakalot-v1.6.28.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/293eb3c/tachiyomi-en.mangakakalot-v1.6.29.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/mangakakalot/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.mangakakalot-v1.6.28.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/293eb3c/tachiyomi-en.mangakakalot-v1.6.29.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106028",
-        "versionName": "1.6.28",
+        "versionCode": "106029",
+        "versionName": "1.6.29",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
             "id": "2528986671771677900",
             "name": "Mangakakalot",
             "language": "en",
-            "homeUrl": "https://www.kakamanga.com",
+            "homeUrl": "https://www.katamanga.com",
             "mirrorUrls": [
-              "https://www.kakamanga.com",
+              "https://www.katamanga.com",
               "https://www.mangakakalove.com"
             ]
           }
@@ -697,13 +697,13 @@
         "name": "Manganato",
         "packageName": "eu.kanade.tachiyomi.extension.en.manganelo",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.manganelo-v1.6.25.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/293eb3c/tachiyomi-en.manganelo-v1.6.26.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/manganelo/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.manganelo-v1.6.25.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/293eb3c/tachiyomi-en.manganelo-v1.6.26.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106025",
-        "versionName": "1.6.25",
+        "versionCode": "106026",
+        "versionName": "1.6.26",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {

@@ -47,12 +47,12 @@
     {
       "name": "Mangakakalot",
       "packageName": "eu.kanade.tachiyomi.extension.en.mangakakalot",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.mangakakalot-v1.6.28.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/293eb3c/tachiyomi-en.mangakakalot-v1.6.29.apk"
     },
     {
       "name": "Manganato",
       "packageName": "eu.kanade.tachiyomi.extension.en.manganelo",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-en.manganelo-v1.6.25.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/293eb3c/tachiyomi-en.manganelo-v1.6.26.apk"
     },
     {
       "name": "MangaPill",
