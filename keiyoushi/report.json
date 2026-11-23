@@ -7,77 +7,77 @@
     {
       "name": "AsmHentai",
       "packageName": "eu.kanade.tachiyomi.extension.all.asmhentai",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-0/tachiyomi-all.asmhentai-v1.6.15.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-all.asmhentai-v1.6.15.apk"
     },
     {
       "name": "Comikey",
       "packageName": "eu.kanade.tachiyomi.extension.all.comikey",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/02402ef/tachiyomi-all.comikey-v1.6.15.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-all.comikey-v1.6.15.apk"
     },
     {
       "name": "MangaDex",
       "packageName": "eu.kanade.tachiyomi.extension.all.mangadex",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d9420cd/tachiyomi-all.mangadex-v1.6.4.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-all.mangadex-v1.6.5.apk"
     },
     {
       "name": "MangaFire",
       "packageName": "eu.kanade.tachiyomi.extension.all.mangafire",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/02402ef/tachiyomi-all.mangafire-v1.6.38.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/582615a/tachiyomi-all.mangafire-v1.6.40.apk"
     },
     {
       "name": "Tappytoon",
       "packageName": "eu.kanade.tachiyomi.extension.all.tappytoon",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/4dd3c34/tachiyomi-all.tappytoon-v1.6.3.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-all.tappytoon-v1.6.3.apk"
     },
     {
       "name": "Webtoons.com",
       "packageName": "eu.kanade.tachiyomi.extension.all.webtoons",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/2137e82/tachiyomi-all.webtoons-v1.6.5.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-all.webtoons-v1.6.5.apk"
     },
     {
       "name": "Asura Scans",
       "packageName": "eu.kanade.tachiyomi.extension.en.asurascans",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/d0478bb/tachiyomi-en.asurascans-v1.6.72.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-en.asurascans-v1.6.72.apk"
     },
     {
       "name": "Flame Comics",
       "packageName": "eu.kanade.tachiyomi.extension.en.flamecomics",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-0/tachiyomi-en.flamecomics-v1.6.3.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-en.flamecomics-v1.6.3.apk"
     },
     {
       "name": "Mangakakalot",
       "packageName": "eu.kanade.tachiyomi.extension.en.mangakakalot",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/293eb3c/tachiyomi-en.mangakakalot-v1.6.29.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.mangakakalot-v1.6.30.apk"
     },
     {
       "name": "Manganato",
       "packageName": "eu.kanade.tachiyomi.extension.en.manganelo",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/293eb3c/tachiyomi-en.manganelo-v1.6.26.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.manganelo-v1.6.27.apk"
     },
     {
       "name": "MangaPill",
       "packageName": "eu.kanade.tachiyomi.extension.en.mangapill",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b035310-1/tachiyomi-en.mangapill-v1.6.1.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.mangapill-v1.6.1.apk"
     },
     {
       "name": "Manhua Plus",
       "packageName": "eu.kanade.tachiyomi.extension.en.manhuaplus",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/ef952a6/tachiyomi-en.manhuaplus-v1.6.68.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.manhuaplus-v1.6.68.apk"
     },
     {
       "name": "Tapas",
       "packageName": "eu.kanade.tachiyomi.extension.en.tapastic",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/3cf15bc/tachiyomi-en.tapastic-v1.6.6.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.tapastic-v1.6.6.apk"
     },
     {
       "name": "Toonily",
       "packageName": "eu.kanade.tachiyomi.extension.en.toonily",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/ef952a6/tachiyomi-en.toonily-v1.6.79.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.toonily-v1.6.79.apk"
     },
     {
       "name": "Weeb Central",
       "packageName": "eu.kanade.tachiyomi.extension.en.weebcentral",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/3cf15bc/tachiyomi-en.weebcentral-v1.6.27.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.weebcentral-v1.6.27.apk"
     }
   ]
 }
