@@ -12,7 +12,7 @@
     {
       "name": "Comikey",
       "packageName": "eu.kanade.tachiyomi.extension.all.comikey",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-all.comikey-v1.6.15.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/14e2239/tachiyomi-all.comikey-v1.6.15.apk"
     },
     {
       "name": "MangaDex",
@@ -22,7 +22,7 @@
     {
       "name": "MangaFire",
       "packageName": "eu.kanade.tachiyomi.extension.all.mangafire",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/582615a/tachiyomi-all.mangafire-v1.6.40.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/14e2239/tachiyomi-all.mangafire-v1.6.40.apk"
     },
     {
       "name": "Tappytoon",
