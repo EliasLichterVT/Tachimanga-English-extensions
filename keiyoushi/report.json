@@ -27,7 +27,7 @@
     {
       "name": "Tappytoon",
       "packageName": "eu.kanade.tachiyomi.extension.all.tappytoon",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-all.tappytoon-v1.6.3.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/bac637a/tachiyomi-all.tappytoon-v1.6.4.apk"
     },
     {
       "name": "Webtoons.com",
@@ -62,7 +62,7 @@
     {
       "name": "Manhua Plus",
       "packageName": "eu.kanade.tachiyomi.extension.en.manhuaplus",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.manhuaplus-v1.6.68.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/bac637a/tachiyomi-en.manhuaplus-v1.6.68.apk"
     },
     {
       "name": "Tapas",
@@ -72,7 +72,7 @@
     {
       "name": "Toonily",
       "packageName": "eu.kanade.tachiyomi.extension.en.toonily",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.toonily-v1.6.79.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/bac637a/tachiyomi-en.toonily-v1.6.79.apk"
     },
     {
       "name": "Weeb Central",

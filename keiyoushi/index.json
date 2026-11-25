@@ -540,13 +540,13 @@
         "name": "Tappytoon",
         "packageName": "eu.kanade.tachiyomi.extension.all.tappytoon",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-all.tappytoon-v1.6.3.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/bac637a/tachiyomi-all.tappytoon-v1.6.4.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/all/tappytoon/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-0/tachiyomi-all.tappytoon-v1.6.3.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/bac637a/tachiyomi-all.tappytoon-v1.6.4.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106003",
-        "versionName": "1.6.3",
+        "versionCode": "106004",
+        "versionName": "1.6.4",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
@@ -744,9 +744,9 @@
         "name": "Manhua Plus",
         "packageName": "eu.kanade.tachiyomi.extension.en.manhuaplus",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.manhuaplus-v1.6.68.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/bac637a/tachiyomi-en.manhuaplus-v1.6.68.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/manhuaplus/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.manhuaplus-v1.6.68.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/bac637a/tachiyomi-en.manhuaplus-v1.6.68.jar"
         },
         "extensionLib": "1.6",
         "versionCode": "106068",
@@ -786,9 +786,9 @@
         "name": "Toonily",
         "packageName": "eu.kanade.tachiyomi.extension.en.toonily",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.toonily-v1.6.79.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/bac637a/tachiyomi-en.toonily-v1.6.79.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/toonily/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.toonily-v1.6.79.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/bac637a/tachiyomi-en.toonily-v1.6.79.jar"
         },
         "extensionLib": "1.6",
         "versionCode": "106079",
