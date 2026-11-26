@@ -483,13 +483,13 @@
         "name": "MangaFire",
         "packageName": "eu.kanade.tachiyomi.extension.all.mangafire",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/14e2239/tachiyomi-all.mangafire-v1.6.40.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/5244cf4/tachiyomi-all.mangafire-v1.6.41.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/all/mangafire/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/14e2239/tachiyomi-all.mangafire-v1.6.40.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/5244cf4/tachiyomi-all.mangafire-v1.6.41.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106040",
-        "versionName": "1.6.40",
+        "versionCode": "106041",
+        "versionName": "1.6.41",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
@@ -672,13 +672,13 @@
         "name": "Mangakakalot",
         "packageName": "eu.kanade.tachiyomi.extension.en.mangakakalot",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.mangakakalot-v1.6.30.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/5244cf4/tachiyomi-en.mangakakalot-v1.6.31.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/mangakakalot/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.mangakakalot-v1.6.30.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/5244cf4/tachiyomi-en.mangakakalot-v1.6.31.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106030",
-        "versionName": "1.6.30",
+        "versionCode": "106031",
+        "versionName": "1.6.31",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
@@ -697,24 +697,25 @@
         "name": "Manganato",
         "packageName": "eu.kanade.tachiyomi.extension.en.manganelo",
         "resources": {
-          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.manganelo-v1.6.27.apk",
+          "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/5244cf4/tachiyomi-en.manganelo-v1.6.28.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@main/src/en/manganelo/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.manganelo-v1.6.27.jar"
+          "jarUrl": "https://github.com/keiyoushi/extensions/releases/download/5244cf4/tachiyomi-en.manganelo-v1.6.28.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106027",
-        "versionName": "1.6.27",
+        "versionCode": "106028",
+        "versionName": "1.6.28",
         "contentWarning": "CONTENT_WARNING_MIXED",
         "sources": [
           {
             "id": "1024627298672457456",
             "name": "Manganato",
             "language": "en",
-            "homeUrl": "https://www.natomanga.com",
+            "homeUrl": "https://www.saiyanmanga.com",
             "mirrorUrls": [
-              "https://www.natomanga.com",
+              "https://www.saiyanmanga.com",
               "https://www.nelomanga.net",
-              "https://www.manganato.gg"
+              "https://www.manganato.gg",
+              "https://www.natomanga.com"
             ]
           }
         ]

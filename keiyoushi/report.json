@@ -22,7 +22,7 @@
     {
       "name": "MangaFire",
       "packageName": "eu.kanade.tachiyomi.extension.all.mangafire",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/14e2239/tachiyomi-all.mangafire-v1.6.40.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/5244cf4/tachiyomi-all.mangafire-v1.6.41.apk"
     },
     {
       "name": "Tappytoon",
@@ -47,12 +47,12 @@
     {
       "name": "Mangakakalot",
       "packageName": "eu.kanade.tachiyomi.extension.en.mangakakalot",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.mangakakalot-v1.6.30.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/5244cf4/tachiyomi-en.mangakakalot-v1.6.31.apk"
     },
     {
       "name": "Manganato",
       "packageName": "eu.kanade.tachiyomi.extension.en.manganelo",
-      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/b4f9106-1/tachiyomi-en.manganelo-v1.6.27.apk"
+      "apkUrl": "https://github.com/keiyoushi/extensions/releases/download/5244cf4/tachiyomi-en.manganelo-v1.6.28.apk"
     },
     {
       "name": "MangaPill",
